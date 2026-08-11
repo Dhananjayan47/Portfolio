@@ -7,15 +7,17 @@ const ProjectsInfo: {
   name: string;
   description: string;
   image: string;
+  liveLink: string,
   techUsed: TechItem[];
 }[] = [
   {
     name: "Real-time Chat App",
     description:
-      "A scalable chat application built with React and Node.js, featuring WebSocket integration for real-time communication and a responsive design for seamless user experience across devices.",
+    "A scalable chat application built with React and Node.js, featuring WebSocket integration for real-time communication and a responsive design for seamless user experience across devices.",
     image: "/images/GroupMusicDashboard.png",
-      techUsed: [
-        { name: "HTML" },
+    liveLink:"https://group-music.vercel.app/",
+    techUsed: [
+      { name: "HTML" },
         { name: "CSS" },
         { name: "JS" },
         { name: "Bootstrap" },
@@ -26,12 +28,13 @@ const ProjectsInfo: {
         { name: "REST API" },
         { name: "Socket.io" },
       ],
-  },
+    },
   {
     name: "Expense Tracker",
     description:
-      "An expense tracker site built with the MERN stack, allowing users to log expenses, categorize spending, and monitor their finances with a responsive dashboard.",
+    "An expense tracker site built with the MERN stack, allowing users to log expenses, categorize spending, and monitor their finances with a responsive dashboard.",
     image: "/images/ExpenseTrackerUI.png",
+    liveLink: "https://expense-tracker-mern-steel-mu.vercel.app/",
     techUsed: [
       { name: "HTML" },
       { name: "CSS" },
@@ -48,7 +51,7 @@ const ProjectsInfo: {
 
 type ProjectItem = typeof ProjectsInfo[number];
 
-const ProjectCard: React.FC<ProjectItem> = ({ name, description, image, techUsed }) => {
+const ProjectCard: React.FC<ProjectItem> = ({ name, description, image, liveLink, techUsed }) => {
   const divRef = useRef<HTMLDivElement>(null);
 
   useSectionDivAnimation(divRef);
@@ -71,7 +74,7 @@ const ProjectCard: React.FC<ProjectItem> = ({ name, description, image, techUsed
         <p className="py-2">
           Live demo: {" "}
           <a
-            href="https://nerdcave.com/tailwind-cheat-sheet"
+            href={liveLink}
             target="_blank"
             rel="noopener noreferrer"
             className="text-blue-500 hover:underline"
