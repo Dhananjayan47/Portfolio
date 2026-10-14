@@ -11,9 +11,9 @@ const ProjectsInfo: {
   techUsed: TechItem[];
 }[] = [
   {
-    name: "Real-time Chat App",
+    name: "Real-time Group Music Listening App",
     description:
-    "A scalable chat application built with React and Node.js, featuring WebSocket integration for real-time communication and a responsive design for seamless user experience across devices.",
+    "A MERN stack application for real-time group music listening, enabling synchronized playback, collaborative queue control, and a smooth responsive experience across devices.",
     image: "/images/GroupMusicDashboard.png",
     liveLink:"https://group-music.vercel.app/",
     techUsed: [
