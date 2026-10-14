@@ -11,7 +11,7 @@ const ProjectsInfo: {
   techUsed: TechItem[];
 }[] = [
   {
-    name: "Real-time Group Music Listening App",
+    name: "Group Music Listening App",
     description:
     "A MERN stack application for real-time group music listening, enabling synchronized playback, collaborative queue control, and a smooth responsive experience across devices.",
     image: "/images/GroupMusicDashboard.png",
